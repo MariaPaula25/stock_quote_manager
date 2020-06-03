@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "0713ba57-a0d1-49de-97c4-3f404b7dedc9",
+		"name": "spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get stocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/stock ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"stock "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Stock Quote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"id\":\"petr4\",\r\n   \"quotes\":{\r\n      \"2019-01-07\":\"18\",\r\n      \"2019-01-08\":\"19\",\r\n      \"2019-01-09\":\"20\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/stock_quote/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stock_quote",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all Stock Quotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"id\":\"petr3\",\r\n   \"quotes\":{\r\n      \"2019-01-01\":\"10\",\r\n      \"2019-01-02\":\"11\",\r\n      \"2019-01-03\":\"14\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/stock_quote/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stock_quote",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read a Stock Quote by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"id\":\"petr3\",\r\n   \"quotes\":{\r\n      \"2019-01-01\":\"10\",\r\n      \"2019-01-02\":\"11\",\r\n      \"2019-01-03\":\"14\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/stock_quote/petr3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"stock_quote",
+						"petr3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a stock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\":\"test\",\r\n   \"description\":\"description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stock"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
