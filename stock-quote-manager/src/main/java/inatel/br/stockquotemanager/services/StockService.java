@@ -13,7 +13,7 @@ import java.util.*;
 @Service
 public class StockService {
 
-    private static final String SERVER_URL = "http://localhost:8080";
+    private static final String SERVER_URL = "http://api:8080";
     private static List<Stock> stockList = new ArrayList<>();
 
     public void registerInStockManager() throws Exception {
